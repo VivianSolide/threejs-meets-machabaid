@@ -1,14 +1,16 @@
 const container = document.getElementById("container")
 const scene = new THREE.Scene()
-const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 200)
+const camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 10, 100)
 const controls = new THREE.OrbitControls(camera, container)
 const renderer = new THREE.WebGLRenderer()
 const rayCaster = new THREE.Raycaster()
 
 renderer.setSize(window.innerWidth, window.innerHeight)
 container.appendChild(renderer.domElement)
-controls.rotateSpeed = 0.2
-controls.enablePan = false
+controls.rotateSpeed = 0.4
+controls.enablePan = true
+controls.enableZoom = true
+controls.keyPanSpeed = 1000
 camera.position.set(-0.1, 0, 0)
 controls.update()
 
