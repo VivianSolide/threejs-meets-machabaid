@@ -1,6 +1,6 @@
 const container = document.getElementById("container")
 const scene = new THREE.Scene()
-const camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 10, 100)
+const camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 10, 100)
 const controls = new THREE.OrbitControls(camera, container)
 const renderer = new THREE.WebGLRenderer()
 const rayCaster = new THREE.Raycaster()
@@ -55,7 +55,10 @@ class Scene {
         let tempMaterial = new THREE.MeshBasicMaterial({ map, side: THREE.DoubleSide });
         let plane = new THREE.Mesh(tempGeo, tempMaterial);
         this.scene.add(plane)
-        plane.position.set(this.randomNumber(-10, 10), this.randomNumber(-10, 10), this.randomNumber(-50, 50))
+        plane.position.set(this.randomNumber(-50, 50), this.randomNumber(-32, 32), this.randomNumber(-32, 32))
+        // plane.rotation.x = this.randomNumber(-180, 180)
+        plane.rotation.y = this.randomNumber(-360, 360)
+        // plane.rotation.z = this.randomNumber(-32, 32)
       }
     }
   }
