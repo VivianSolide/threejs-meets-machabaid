@@ -82,7 +82,6 @@ class Scene {
   }
 
   destroy() {
-    console.log(this.sprites)
     TweenLite.to(this.sphere.material, 1, {
       opacity: 0,
       onComplete: () => {
@@ -92,6 +91,8 @@ class Scene {
     this.sprites.forEach((sprite) => {
       this.scene.remove(sprite)
     })
+    // removing all materials
+    this.scene.children = []
   }
 
   appear() {
@@ -112,10 +113,37 @@ const materials = {
 
   },
   s1: [
-    "assets/s1/materials/mw4.jpg",
-    "assets/s1/materials/mw5.jpg",
-    "assets/s1/materials/mw6.jpg",
-    "assets/s1/materials/mw8.jpg",
+    "assets/s1/materials/mw-0.jpg",
+    "assets/s1/materials/mw-1.jpg",
+    "assets/s1/materials/mw-2.jpg",
+    "assets/s1/materials/mw-3.jpg",
+    "assets/s1/materials/mw-4.jpg",
+    "assets/s1/materials/mw-5.jpg",
+    "assets/s1/materials/mw-6.jpg",
+    "assets/s1/materials/mw-7.jpg",
+    "assets/s1/materials/mw-8.jpg",
+    "assets/s1/materials/mw-9.jpg",
+    "assets/s1/materials/mw-10.jpg",
+    "assets/s1/materials/mw-11.jpg",
+    "assets/s1/materials/mw-12.jpg",
+    "assets/s1/materials/mw-13.jpg",
+    "assets/s1/materials/mw-14.jpg",
+    // "assets/s1/materials/mw-15.jpg",
+    "assets/s1/materials/mw-16.jpg",
+    "assets/s1/materials/mw-17.jpg",
+    "assets/s1/materials/mw-18.jpg",
+    "assets/s1/materials/mw-19.jpg",
+    "assets/s1/materials/mw-20.jpg",
+    "assets/s1/materials/mw-21.jpg",
+    "assets/s1/materials/mw-22.jpg",
+    "assets/s1/materials/mw-23.jpg",
+    "assets/s1/materials/mw-24.jpg",
+    "assets/s1/materials/mw-25.jpg",
+    "assets/s1/materials/mw-26.jpg",
+    "assets/s1/materials/mw-27.jpg",
+    "assets/s1/materials/mw-28.jpg",
+    "assets/s1/materials/mw-29.jpg",
+    "assets/s1/materials/mw-30.jpg",
   ]
 }
 
