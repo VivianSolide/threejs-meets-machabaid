@@ -82,6 +82,7 @@ class Scene {
   }
 
   destroy() {
+    console.log(this.sprites)
     TweenLite.to(this.sphere.material, 1, {
       opacity: 0,
       onComplete: () => {
@@ -89,9 +90,7 @@ class Scene {
       }
     })
     this.sprites.forEach((sprite) => {
-      () => {
-        this.scene.remove(sprite)
-      }
+      this.scene.remove(sprite)
     })
   }
 
