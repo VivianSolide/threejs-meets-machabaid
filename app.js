@@ -147,6 +147,49 @@ const materials = {
     "assets/s1/materials/mw-28.jpg",
     "assets/s1/materials/mw-29.jpg",
     "assets/s1/materials/mw-30.jpg",
+  ],
+  s2: [
+    "assets/s2/materials/leon_souzicqs_0.jpg",
+    "assets/s2/materials/leon_souzicqs_1.jpg",
+    "assets/s2/materials/leon_souzicqs_2.jpg",
+    "assets/s2/materials/leon_souzicqs_3.jpg",
+    "assets/s2/materials/leon_souzicqs_4.jpg",
+    "assets/s2/materials/leon_souzicqs_5.jpg",
+    "assets/s2/materials/leon_souzicqs_6.jpg",
+    "assets/s2/materials/leon_souzicqs_7.jpg",
+    "assets/s2/materials/leon_souzicqs_8.jpg",
+    "assets/s2/materials/leon_souzicqs_9.jpg",
+    "assets/s2/materials/leon_souzicqs_10.jpg",
+    "assets/s2/materials/leon_souzicqs_11.jpg",
+    "assets/s2/materials/leon_souzicqs_12.jpg",
+    "assets/s2/materials/leon_souzicqs_13.jpg",
+    "assets/s2/materials/leon_souzicqs_14.jpg",
+    "assets/s2/materials/leon_souzicqs_15.jpg",
+    "assets/s2/materials/leon_souzicqs_16.jpg",
+    "assets/s2/materials/leon_souzicqs_17.jpg",
+    "assets/s2/materials/leon_souzicqs_18.jpg",
+    "assets/s2/materials/leon_souzicqs_19.jpg",
+    "assets/s2/materials/leon_souzicqs_20.jpg",
+    "assets/s2/materials/leon_souzicqs_21.jpg",
+    "assets/s2/materials/leon_souzicqs_22.jpg",
+    "assets/s2/materials/leon_souzicqs_23.jpg",
+    "assets/s2/materials/leon_souzicqs_24.jpg",
+    "assets/s2/materials/leon_souzicqs_25.jpg",
+    "assets/s2/materials/leon_souzicqs_26.jpg",
+    "assets/s2/materials/leon_souzicqs_27.jpg",
+    "assets/s2/materials/leon_souzicqs_28.jpg",
+    "assets/s2/materials/leon_souzicqs_29.jpg",
+    "assets/s2/materials/leon_souzicqs_30.jpg",
+    "assets/s2/materials/leon_souzicqs_31.jpg",
+    "assets/s2/materials/leon_souzicqs_32.jpg",
+    "assets/s2/materials/leon_souzicqs_33.jpg",
+    "assets/s2/materials/leon_souzicqs_34.jpg",
+    "assets/s2/materials/leon_souzicqs_35.jpg",
+    "assets/s2/materials/leon_souzicqs_36.jpg",
+    "assets/s2/materials/leon_souzicqs_37.jpg",
+    "assets/s2/materials/leon_souzicqs_38.jpg",
+    "assets/s2/materials/leon_souzicqs_39.jpg",
+    "assets/s2/materials/leon_souzicqs_40.jpg",
   ]
 }
 
@@ -154,6 +197,7 @@ const materials = {
 // Sphères
 let s0 = new Scene('assets/s0/360.jpeg', camera)
 let s1 = new Scene('assets/s1/360.jpeg', camera, materials.s1)
+let s2 = new Scene('assets/s2/360.jpeg', camera, materials.s2)
 
 s0.addPoint({
   position: new THREE.Vector3(2, 0.5, 0),
@@ -164,6 +208,12 @@ s0.addPoint({
 s1.addPoint({
   position: new THREE.Vector3(3, 0.4, 5),
   name: 'Walk',
+  scene: s2
+})
+
+s2.addPoint({
+  position: new THREE.Vector3(3, 0.4, 5),
+  name: 'Leon Souzicqs',
   scene: s0
 })
 
